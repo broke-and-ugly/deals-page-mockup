@@ -1,3 +1,12 @@
-h1 {
-   color: red;
-}
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+
+@import "modules/base";
+@import "modules/site-nav";
+@import "modules/featured";
+@import "modules/sub-nav";
+@import "modules/extra-padding";
+@import "modules/deals-section";
+@import "modules/deal";

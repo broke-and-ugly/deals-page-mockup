@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/broke-and-ugly/deals-page-mockup#readme",
   "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.5",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-sass": "^4.0.2",

@@ -1,0 +1,29 @@
+.deals-section {
+   margin-top: 90px;
+
+   &:last-child {
+      margin-bottom: 100px;
+   }
+
+   &__header-group {
+      align-items: center;
+      display: flex;
+   }
+
+   &__header {
+      font-size: 21px;
+      font-weight: 700;
+      margin-right: 12px;
+   }
+
+   &__header-cat {
+      color: $color-grey;
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: -7px;
+
+      &::before {
+         content: "\003E \00A0";
+      }
+   }
+}
