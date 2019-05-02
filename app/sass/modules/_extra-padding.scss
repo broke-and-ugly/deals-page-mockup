@@ -1,4 +1,9 @@
 .extra-padding {
    padding-left: 45px;
    padding-right: 45px;
+
+   @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+   }
 }

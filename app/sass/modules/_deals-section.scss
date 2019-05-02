@@ -8,12 +8,21 @@
    &__header-group {
       align-items: center;
       display: flex;
+
+      @include media-breakpoint-down(sm) {
+         flex-direction: column;
+         align-items: flex-start;
+      }
    }
 
    &__header {
       font-size: 21px;
       font-weight: 700;
       margin-right: 12px;
+
+      @include media-breakpoint-down(sm) {
+         margin-bottom: 15px;
+      }
    }
 
    &__header-cat {
@@ -25,5 +34,13 @@
       &::before {
          content: "\003E \00A0";
       }
+
+      @include media-breakpoint-down(sm) {
+         &::before {
+            content: " ";
+         }
+      }
+
+      
    }
 }

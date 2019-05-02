@@ -12,6 +12,10 @@
       margin-left: 50px;
       margin-top: 120px;
       width: 33%;
+
+      @include media-breakpoint-down(sm) {
+         width: 60%;
+      }
    }
 
    &__hero-logo {
@@ -27,6 +31,16 @@
 
    &__deals {
       margin-top: -60px;
+
+      @include media-breakpoint-down(sm) {
+         margin-left: 30px;
+         margin-right: 30px;
+
+         /* remove after slider is made. just for mockup purposes only */
+         &:not(:first-child) {
+            
+         }
+      }
    }
    
    &__deal {

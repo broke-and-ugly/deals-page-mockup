@@ -1,14 +1,36 @@
 .sub-nav {
    height: 80px;
+   background: #fff;   
 
    &__header {
-      padding-top: 22px;
-      font-size: 24px;
+      padding-top: 12px;
+      font-size: 21px;
       font-weight: 700;
    }
 
+   &__toggler:active, &__toggler:focus  {
+      outline: none;
+   }
+
+   &__toggler {
+      color: $color-black;
+      transition: color .2s;
+
+      &:hover {
+         color: $color-primary;
+      }
+   }
+
    &__items {
-      padding-top: 19px;
+      background: #fff;
+
+      @include media-breakpoint-down(sm) {
+         padding-bottom: 15px;
+      }
+   }
+
+   &__item:not(:last-child) {
+      margin-right: 20px;
    }
    
    &__link {
@@ -19,6 +41,10 @@
 
       &:hover {
          color: $color-primary;
+      }
+
+      @include media-breakpoint-down(md) {
+         font-size: 14px;
       }
    }
 }

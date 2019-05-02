@@ -1,8 +1,11 @@
 .deal {
-   margin-top: 30px;
+   align-items: center;
    background: #fff;
    box-shadow: $shadow-medium;
+   display: flex;
+   flex-direction: column;
    height: 300px;
+   margin-top: 30px;
    overflow: hidden;
    padding-left: 25px;
    padding-right: 25px;
@@ -14,15 +17,17 @@
    }
 
    &__img-wrapper {
-      cursor: pointer;
-      height: 122px;
-      width: 163px;
-      margin: 0 auto;
+      display: flex;
+      height: 120px;
+      width: 100%;
    }
 
    &__img {
-      cursor: pointer;
-      width: 100%;
+      margin: 0 auto;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: center;
    }
 
    &__content {

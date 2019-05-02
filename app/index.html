@@ -15,21 +15,21 @@
          <a class="navbar-brand site-nav__link" href="#">site nav</a>
       </nav>
 
-      <div class="container-fluid"> <!--padding top 175px-->
-         <header id="sub-nav" class="sub-nav extra-padding">
-            <div class="row">
-               <div class="col-12 col-md-4">
-                  <h3 class="sub-nav__header">Student Deals</h3>
-               </div>
-
-               <div class="col-12 col-md-8">
-                  <ul class="nav justify-content-end sub-nav__items">
+      <div class="navbar navbar-expand-md sticky-top sub-nav extra-padding">
+         <div class="container-fluid">
+            <h3 class="navbar-brand sub-nav__header" href="#">Student Deals</h3>
+            <button class="navbar-toggler sub-nav__toggler" type="button" data-toggle="collapse" data-target="#sub-nav__items" aria-controls="sub-nav__items" aria-expanded="false" aria-label="Toggle navigation">
+               Categories
+            </button>
+      
+            <div class="collapse navbar-collapse justify-content-end" id="sub-nav__items">
+               <ul class="navbar-nav sub-nav__items">
                      <li class="nav-item dropdown sub-nav__item">
-                           <a class="nav-link dropdown-toggle sub-nav__link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Software</a>
-                           <div class="dropdown-menu">
-                              <a class="dropdown-item sub-nav__link" href="#software__DAWs">Digital Audio Workstations (DAWs) and Notation Software</a>
-                              <a class="dropdown-item sub-nav__link" href="#software__plugins">Plug-ins and Sample Libraries</a>
-                           </div>
+                        <a class="nav-link dropdown-toggle sub-nav__link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Software</a>
+                        <div class="dropdown-menu">
+                           <a class="dropdown-item sub-nav__link" href="#software__DAWs">Digital Audio Workstations (DAWs) and Notation Software</a>
+                           <a class="dropdown-item sub-nav__link" href="#software__plugins">Plug-ins and Sample Libraries</a>
+                        </div>
                      </li>
                      <li class="nav-item sub-nav__item">
                         <a href="#hardware" class="nav-link sub-nav__link">Hardware</a>
@@ -37,10 +37,12 @@
                      <li class="nav-item sub-nav__item">
                         <a href="#audio-services" class="nav-link sub-nav__link">Audio Services and Subscriptions</a>
                      </li>
-                  </ul>
-               </div>
-            </div>            
-         </header>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <div class="container-fluid"> 
 
          <section class="featured">
             <div class="featured__hero">
@@ -98,11 +100,11 @@
                </div>
             </div>
             <div class="row">
-               <div class="col-12 col-md-4 col-lg-3">
+               <div class="col-6 col-md-4 col-lg-3">
                   <div class="deal">
-                     <div class="deal__img-wrapper">
+                     <a href="#" class="deal__img-wrapper">
                         <img src="img/deal-icon--avid.png" alt="" class="deal__img">
-                     </div>
+                     </a>
                      <div class="deal__content">
                         <h3 class="deal__title">Avid</h3>
                         <p class="deal__copy">Educational discounts on Pro Tools and Sibelius</p>
@@ -110,72 +112,38 @@
                   </div>
                </div>
 
-               <div class="col-12 col-md-4 col-lg-3">
+               <div class="col-6 col-md-4 col-lg-3">
                   <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
+                     <a href="#" class="deal__img-wrapper">
+                        <img src="img/deal-icon--finale.png" alt="" class="deal__img">
+                     </a>
                      <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
+                        <h3 class="deal__title">MakeMusic Finale</h3>
+                        <p class="deal__copy">Educational discounts on Finale (full version)</p>
                      </div>
                   </div>
                </div>
 
-               <div class="col-12 col-md-4 col-lg-3">
+               <div class="col-6 col-md-4 col-lg-3">
                   <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
+                     <a href="#" class="deal__img-wrapper">
+                        <img src="img/deal-icon--ableton.png" alt="" class="deal__img">
+                     </a>
                      <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
+                        <h3 class="deal__title">Ableton</h3>
+                        <p class="deal__copy">Educational discounts on Ableton Live</p>
                      </div>
                   </div>
                </div>
 
-               <div class="col-12 col-md-4 col-lg-3">
+               <div class="col-6 col-md-4 col-lg-3">
                   <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
+                     <a href="#"  class="deal__img-wrapper">
+                        <img src="img/deal-icon--appleProApps.png" alt="" class="deal__img">
+                     </a>
                      <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
+                        <h3 class="deal__title">Apple</h3>
+                        <p class="deal__copy">Degree students save on the Pro Apps Bundle, including Logic Pro X, Final Cut Pro X, and more</p>
                      </div>
                   </div>
                </div>
@@ -191,6 +159,7 @@
                   </div>
                </div>
             </div>
+
             <div class="row">
                <div class="col-12 col-md-4 col-lg-3">
                   <div class="deal">
@@ -200,116 +169,6 @@
                      <div class="deal__content">
                         <h3 class="deal__title">Avid</h3>
                         <p class="deal__copy">Educational discounts on Pro Tools and Sibelius</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-12 col-md-4 col-lg-3">
-                  <div class="deal">
-                     <img src="img/deal-icon--placeholder.png" alt="" class="deal__img">
-                     <div class="deal__content">
-                        <h3 class="deal__title">Deal Title</h3>
-                        <p class="deal__copy">Deal Copy</p>
                      </div>
                   </div>
                </div>
