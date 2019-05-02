@@ -41,11 +41,16 @@ body {
 .featured__hero-content {
   height: 200px;
   margin-left: 50px;
-  margin-top: 120px;
+  margin-top: 113px;
   width: 33%; }
+  @media (max-width: 991.98px) {
+    .featured__hero-content {
+      margin-left: 30px;
+      width: 45%; } }
   @media (max-width: 767.98px) {
     .featured__hero-content {
-      width: 60%; } }
+      margin-left: 30px;
+      width: 70%; } }
 
 .featured__hero-logo {
   -webkit-filter: invert(100%);
@@ -54,7 +59,7 @@ body {
 
 .featured__hero-copy {
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 30px; }
 
 .featured__deals {
@@ -63,7 +68,10 @@ body {
     .featured__deals {
       margin-left: 30px;
       margin-right: 30px;
-      /* remove after slider is made. just for mockup purposes only */ } }
+      /* remove after slider is made. just for mockup purposes only */ }
+      .featured__deals > .row > *:not(:first-child) {
+        display: none;
+        visibility: hidden; } }
 
 .featured__deal {
   align-items: center;
@@ -75,30 +83,46 @@ body {
   padding-right: 20px;
   transition: box-shadow .2s; }
   .featured__deal:hover {
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.19);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.26);
     text-decoration: none; }
   @media (max-width: 991.98px) {
     .featured__deal {
       flex-direction: column;
       height: 145px; } }
   .featured__deal--selected {
-    border: 2px solid #EC253D; }
+    border: 2px solid #EC253D;
+    /* remove after slider is made. just for mockup purposes only */ }
+    @media (max-width: 767.98px) {
+      .featured__deal--selected {
+        border: none; } }
 
 .featured__deal-logo-wrapper {
   margin-right: 25px;
   width: 50%; }
   @media (max-width: 991.98px) {
     .featured__deal-logo-wrapper {
-      margin-right: 0;
-      margin-top: 20px;
+      display: flex;
       height: 40px;
+      margin-right: 0;
+      margin-top: 25px;
       width: 90%; } }
   @media (max-width: 767.98px) {
     .featured__deal-logo-wrapper {
-      width: 50%; } }
+      margin-bottom: 5px;
+      margin-top: 30px;
+      width: 60%; } }
 
 .featured__deal-logo {
   width: 100%; }
+  @media (max-width: 991.98px) {
+    .featured__deal-logo {
+      margin: 0 auto;
+      max-height: 100%;
+      max-width: 100%;
+      -o-object-fit: contain;
+         object-fit: contain;
+      -o-object-position: center;
+         object-position: center; } }
 
 .featured__deal-content {
   color: #000;
@@ -109,6 +133,21 @@ body {
   @media (max-width: 991.98px) {
     .featured__deal-content {
       text-align: center; } }
+
+.featured__controls {
+  position: relative; }
+
+.featured__control {
+  position: absolute;
+  top: 74%; }
+  .featured__control--prev {
+    left: -6%; }
+  .featured__control--next {
+    right: -6%; }
+
+.featured__control-icon {
+  -webkit-filter: invert(100%);
+          filter: invert(100%); }
 
 .sub-nav {
   height: 80px;
@@ -123,6 +162,7 @@ body {
     color: #000;
     transition: color .2s; }
     .sub-nav__toggler:hover {
+      cursor: pointer;
       color: #EC253D; }
   .sub-nav__items {
     background: #fff; }
@@ -141,6 +181,9 @@ body {
     @media (max-width: 991.98px) {
       .sub-nav__link {
         font-size: 14px; } }
+    @media (max-width: 767.98px) {
+      .sub-nav__link {
+        font-size: 18px; } }
 
 .extra-padding {
   padding-left: 45px;
@@ -169,7 +212,7 @@ body {
       .deals-section__header {
         margin-bottom: 15px; } }
   .deals-section__header-cat {
-    color: #6C6C6C;
+    color: #4B5961;
     font-size: 16px;
     font-weight: 700;
     margin-top: -7px; }
@@ -193,11 +236,11 @@ body {
   padding-top: 35px;
   transition: box-shadow .2s; }
   .deal:hover {
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.19); }
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.26); }
   .deal__img-wrapper {
     display: flex;
     height: 120px;
-    width: 100%; }
+    width: 80%; }
   .deal__img {
     margin: 0 auto;
     max-height: 100%;
@@ -207,7 +250,8 @@ body {
     -o-object-position: center;
        object-position: center; }
   .deal__content {
-    margin-top: 25px; }
+    margin-top: 25px;
+    align-self: flex-start; }
   .deal__title {
     cursor: pointer;
     font-size: 18px;
