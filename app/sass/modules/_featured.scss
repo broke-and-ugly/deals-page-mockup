@@ -1,17 +1,16 @@
 .featured {
 
-   &__hero {
-      background-size: cover;
-      background: url(../../img/bg--harman.png) center no-repeat;
+   &__hero-item {
       height: 412px;
-      z-index: -1;
    }
 
    &__hero-content {
       height: 200px;
       margin-left: 50px;
       margin-top: 113px;
+      position: relative;
       width: 33%;
+      z-index: 2;
 
       @include media-breakpoint-down(md) {
          margin-left: 30px;
@@ -24,15 +23,31 @@
       }
    }
 
+   &__hero-bg {
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+   }
+
+   &__hero-logo-wrapper {
+      height: 90px;
+   }
+
    &__hero-logo {
       filter: invert(100%);
-      width: 100%;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: center;
    }
 
    &__hero-copy {
       color: #fff;
       font-size: 18px;
-      margin-top: 30px;
+      margin-top: 20px;
    }
 
    &__deals {
@@ -55,20 +70,18 @@
       background: #fff;
       box-shadow: $shadow-medium;
       display: flex;
-      height: 125px;
+      height: 140px;
       padding-left: 20px;
       padding-right: 20px;
       transition: box-shadow .2s;
+      flex-direction: column;
+
 
       &:hover {
          box-shadow: $shadow-large;
          text-decoration: none;
+         cursor: pointer;
       }
-
-      @include media-breakpoint-down(md) {
-         flex-direction: column;
-         height: 145px;
-       }
 
       &--selected {
          border: 2px solid $color-primary;
@@ -81,15 +94,14 @@
    }
 
    &__deal-logo-wrapper {
-      margin-right: 25px;
+      display: flex;
+      max-height: 40px;
+      margin-right: 0;
+      margin-top: 25px;
       width: 50%;
 
       @include media-breakpoint-down(md) {
-         display: flex;
-         height: 40px;
-         margin-right: 0;
-         margin-top: 25px;
-         width: 90%;
+         width: 70%;
       }
 
       @include media-breakpoint-down(sm) {
@@ -100,7 +112,10 @@
    }
 
    &__deal-logo {
-      width: 100%;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: center;
 
       @include media-breakpoint-down(md) {
          margin: 0 auto;
@@ -129,10 +144,11 @@
 
    &__control {
       position: absolute;
-      top: 74%;
+      top: 77%;
+      width: 50px;
 
-      &--prev { left: -6%; }
-      &--next { right: -6%; }
+      &--prev { margin-left: -1%; }
+      &--next { margin-right: -1%; }
    }
 
    &__control-icon {

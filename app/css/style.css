@@ -32,17 +32,16 @@ body {
   .site-nav__link {
     margin: 0 auto; }
 
-.featured__hero {
-  background-size: cover;
-  background: url(../../img/bg--harman.png) center no-repeat;
-  height: 412px;
-  z-index: -1; }
+.featured__hero-item {
+  height: 412px; }
 
 .featured__hero-content {
   height: 200px;
   margin-left: 50px;
   margin-top: 113px;
-  width: 33%; }
+  position: relative;
+  width: 33%;
+  z-index: 2; }
   @media (max-width: 991.98px) {
     .featured__hero-content {
       margin-left: 30px;
@@ -52,15 +51,33 @@ body {
       margin-left: 30px;
       width: 70%; } }
 
+.featured__hero-bg {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center; }
+
+.featured__hero-logo-wrapper {
+  height: 90px; }
+
 .featured__hero-logo {
   -webkit-filter: invert(100%);
           filter: invert(100%);
-  width: 100%; }
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center; }
 
 .featured__hero-copy {
   color: #fff;
   font-size: 18px;
-  margin-top: 30px; }
+  margin-top: 20px; }
 
 .featured__deals {
   margin-top: -60px; }
@@ -78,17 +95,15 @@ body {
   background: #fff;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.22);
   display: flex;
-  height: 125px;
+  height: 140px;
   padding-left: 20px;
   padding-right: 20px;
-  transition: box-shadow .2s; }
+  transition: box-shadow .2s;
+  flex-direction: column; }
   .featured__deal:hover {
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.26);
-    text-decoration: none; }
-  @media (max-width: 991.98px) {
-    .featured__deal {
-      flex-direction: column;
-      height: 145px; } }
+    text-decoration: none;
+    cursor: pointer; }
   .featured__deal--selected {
     border: 2px solid #EC253D;
     /* remove after slider is made. just for mockup purposes only */ }
@@ -97,15 +112,14 @@ body {
         border: none; } }
 
 .featured__deal-logo-wrapper {
-  margin-right: 25px;
+  display: flex;
+  max-height: 40px;
+  margin-right: 0;
+  margin-top: 25px;
   width: 50%; }
   @media (max-width: 991.98px) {
     .featured__deal-logo-wrapper {
-      display: flex;
-      height: 40px;
-      margin-right: 0;
-      margin-top: 25px;
-      width: 90%; } }
+      width: 70%; } }
   @media (max-width: 767.98px) {
     .featured__deal-logo-wrapper {
       margin-bottom: 5px;
@@ -113,7 +127,12 @@ body {
       width: 60%; } }
 
 .featured__deal-logo {
-  width: 100%; }
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center; }
   @media (max-width: 991.98px) {
     .featured__deal-logo {
       margin: 0 auto;
@@ -139,11 +158,12 @@ body {
 
 .featured__control {
   position: absolute;
-  top: 74%; }
+  top: 77%;
+  width: 50px; }
   .featured__control--prev {
-    left: -6%; }
+    margin-left: -1%; }
   .featured__control--next {
-    right: -6%; }
+    margin-right: -1%; }
 
 .featured__control-icon {
   -webkit-filter: invert(100%);

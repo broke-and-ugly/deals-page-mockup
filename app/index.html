@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Document</title>
 
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
    <div class="content-container">
       <nav class="navbar navbar-light bg-light site-nav">
@@ -18,17 +21,22 @@
       <div class="navbar navbar-expand-md sticky-top sub-nav extra-padding">
          <div class="container-fluid">
             <h3 class="navbar-brand sub-nav__header" href="#">Student Deals</h3>
-            <button class="navbar-toggler sub-nav__toggler" type="button" data-toggle="collapse" data-target="#sub-nav__items" aria-controls="sub-nav__items" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler sub-nav__toggler" type="button" data-toggle="collapse"
+               data-target="#sub-nav__items" aria-controls="sub-nav__items" aria-expanded="false"
+               aria-label="Toggle navigation">
                Categories
             </button>
-      
+
             <div class="collapse navbar-collapse justify-content-end" id="sub-nav__items">
                <ul class="navbar-nav sub-nav__items">
                   <li class="nav-item dropdown sub-nav__item">
-                     <a class="nav-link dropdown-toggle sub-nav__link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Software</a>
+                     <a class="nav-link dropdown-toggle sub-nav__link" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Software</a>
                      <div class="dropdown-menu">
-                        <a class="dropdown-item sub-nav__link" href="#software__DAWs">Digital Audio Workstations (DAWs) and Notation Software</a>
-                        <a class="dropdown-item sub-nav__link" href="#software__plugins">Plug-ins and Sample Libraries</a>
+                        <a class="dropdown-item sub-nav__link" href="#software__DAWs">Digital Audio Workstations (DAWs)
+                           and Notation Software</a>
+                        <a class="dropdown-item sub-nav__link" href="#software__plugins">Plug-ins and Sample
+                           Libraries</a>
                      </div>
                   </li>
                   <li class="nav-item sub-nav__item">
@@ -42,61 +50,84 @@
          </div>
       </div>
 
-      <div class="container-fluid"> 
-         <section class="featured featured__controls">
-            <div class="featured__hero">
-               <div class="row">
-                  <div class="col-12">
-                     <div class="featured__hero-content">
+      <div class="container-fluid">
+
+         <section id="carousel-thumb" class="carousel slide carousel-thumbnails featured featured__controls">
+            <div class="carousel-inner" role="listbox">
+               <div class="carousel-item featured__hero-item active">
+                  <img src="img/bg--harman.jpg" alt="harman" class="featured__hero-bg">
+                  <div class="featured__hero-content">
+                     <div class="featured__hero-logo-wrapper">
                         <img src="img/logo--harman.png" alt="featured deal logo" class="featured__hero-logo">
-                        <p class="featured__hero-copy">All Berklee Online degree students save 20% on selected Harman products</p>
                      </div>
+                     <p class="featured__hero-copy">All Berklee Online degree students save 20% on selected Harman
+                        products</p>
+                  </div>
+               </div>
+
+               <div class="carousel-item featured__hero-item">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/252820/1320x580-74.jfif" alt="harman"
+                     class="featured__hero-bg">
+                  <div class="featured__hero-content">
+                     <div class="featured__hero-logo-wrapper">
+                        <img src="img/logo--ableton.svg" alt="featured deal logo" class="featured__hero-logo">
+                     </div>
+                     <p class="featured__hero-copy">Educational discounts on Ableton Live</p>
+                  </div>
+               </div>
+
+               <div class="carousel-item featured__hero-item">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/252820/1320x580-78.jfif" alt="harman"
+                     class="featured__hero-bg">
+                  <div class="featured__hero-content">
+                     <div class="featured__hero-logo-wrapper">
+                        <img src="img/logo--apple.png" alt="featured deal logo" class="featured__hero-logo">
+                     </div>
+                     <p class="featured__hero-copy">Degree students save on the Pro Apps Bundle, including Logic Pro X,
+                        Final Cut Pro X, and more</p>
                   </div>
                </div>
             </div>
-            
+
+            <a class="carousel-control-prev featured__control featured__control--prev" href="#carousel-thumb" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon featured__control-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next featured__control featured__control--next" href="#carousel-thumb" role="button" data-slide="next">
+               <span class="carousel-control-next-icon featured__control-icon" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+            </a>
+
             <div class="featured__deals extra-padding">
                <div class="row">
                   <div class="col-12 col-md-4">
-                     <a href="#" class="featured__deal featured__deal--selected">
+                     <div class="featured__deal featured__deal--selected" data-target="#carousel-thumb" data-slide-to="0" class="active">
                         <div class="featured__deal-logo-wrapper">
                            <img src="img/logo--harman.png" alt="harman kardon" class="featured__deal-logo">
                         </div>
                         <p class="featured__deal-content">20% off</p>
-                     </a>
+                     </div>
                   </div>
 
                   <div class="col-12 col-md-4">
-                     <a href="#" class="featured__deal">
+                     <div class="featured__deal" data-target="#carousel-thumb" data-slide-to="1">
                         <div class="featured__deal-logo-wrapper">
-                              <img src="img/logo--ableton.png" alt="ableton" class="featured__deal-logo">
+                           <img src="img/logo--ableton.svg" alt="ableton" class="featured__deal-logo">
                         </div>
-                        
                         <p class="featured__deal-content">Discounts on Ableton Live</p>
-                     </a>
+                     </div>
                   </div>
 
                   <div class="col-12 col-md-4">
-                     <a href="#" class="featured__deal">
+                     <div class="featured__deal" data-target="#carousel-thumb" data-slide-to="2">
                         <div class="featured__deal-logo-wrapper">
                            <img src="img/logo--apple.png" alt="apple" class="featured__deal-logo">
                         </div>
-               
                         <p class="featured__deal-content">Save on the Pro Apps Bundle</p>
-                     </a>
+                     </div>
                   </div>
                </div>
             </div>
-
-            <a class="carousel-control-prev featured__control featured__control--prev" href="#" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon featured__control-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-            </a>
-
-            <a class="carousel-control-next featured__control featured__control--next" href="#" role="button" data-slide="next">
-               <span class="carousel-control-next-icon featured__control-icon" aria-hidden="true"></span>
-               <span class="sr-only">Next</span>
-            </a>
          </section>
 
          <section id="software__DAWs" class="deals-section extra-padding">
@@ -104,7 +135,8 @@
                <div class="col-12">
                   <div class="deals-section__header-group">
                      <h2 class="deals-section__header">Software</h2>
-                     <span class="deals-section__header-cat">Digital Audio Workstations (DAWs) and Notation Software</span>
+                     <span class="deals-section__header-cat">Digital Audio Workstations (DAWs) and Notation
+                        Software</span>
                   </div>
                </div>
             </div>
@@ -147,12 +179,13 @@
 
                <div class="col-6 col-md-4 col-lg-3">
                   <div class="deal">
-                     <a href="#"  class="deal__img-wrapper">
+                     <a href="#" class="deal__img-wrapper">
                         <img src="img/deal-icon--appleProApps.png" alt="" class="deal__img">
                      </a>
                      <div class="deal__content">
                         <h3 class="deal__title">Apple</h3>
-                        <p class="deal__copy">Degree students save on the Pro Apps Bundle, including Logic Pro X, Final Cut Pro X, and more</p>
+                        <p class="deal__copy">Degree students save on the Pro Apps Bundle, including Logic Pro X, Final
+                           Cut Pro X, and more</p>
                      </div>
                   </div>
                </div>
@@ -361,7 +394,7 @@
                      </div>
                   </div>
                </div>
-               
+
             </div>
          </section>
 
@@ -584,8 +617,15 @@
    </div>
 
 
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+   </script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+   </script>
 </body>
+
 </html>
