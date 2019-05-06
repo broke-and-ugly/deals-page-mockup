@@ -1,6 +1,9 @@
 .sub-nav {
-   height: 80px;
-   background: #fff;   
+   background: #fff; 
+
+   @include media-breakpoint-down(sm) {
+      box-shadow: $shadow-small;
+   }
 
    &__header {
       padding-top: 12px;
@@ -22,6 +25,10 @@
       }
    }
 
+   &__items-wrap {
+      width: 100%;
+   }
+
    &__items {
       background: #fff;
 
@@ -33,12 +40,19 @@
    &__item:not(:last-child) {
       margin-right: 20px;
    }
+
+   &__dropdown {
+      border: none;
+      overflow: auto;
+   }
    
    &__link {
       font-size: 16px;
+      height: 40px;
       font-weight: 700;
       color: $color-black;
       transition: all .2s;
+      
 
       &:hover {
          color: $color-primary;

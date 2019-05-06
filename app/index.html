@@ -27,14 +27,13 @@
                Categories
             </button>
 
-            <div class="collapse navbar-collapse justify-content-end" id="sub-nav__items">
+            <div class="collapse navbar-collapse justify-content-end sub-nav__items-wrap" id="sub-nav__items">
                <ul class="navbar-nav sub-nav__items">
                   <li class="nav-item dropdown sub-nav__item">
                      <a class="nav-link dropdown-toggle sub-nav__link" data-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">Software</a>
-                     <div class="dropdown-menu">
-                        <a class="dropdown-item sub-nav__link" href="#software__DAWs">Digital Audio Workstations (DAWs)
-                           and Notation Software</a>
+                     <div class="dropdown-menu sub-nav__dropdown">
+                        <a class="dropdown-item sub-nav__link" href="#software__DAWs">Digital Audio Workstations (DAWs) and Notation Software</a>
                         <a class="dropdown-item sub-nav__link" href="#software__plugins">Plug-ins and Sample
                            Libraries</a>
                      </div>
@@ -52,7 +51,7 @@
 
       <div class="container-fluid">
 
-         <section id="carousel-thumb" class="carousel slide carousel-thumbnails featured featured__controls">
+         <section id="carousel-thumb" class="carousel slide carousel-thumbnails featured featured__controls" data-ride="carousel" data-interval="7000">
             <div class="carousel-inner" role="listbox">
                <div class="carousel-item featured__hero-item active">
                   <img src="img/bg--harman.jpg" alt="harman" class="featured__hero-bg">
@@ -66,7 +65,7 @@
                </div>
 
                <div class="carousel-item featured__hero-item">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/252820/1320x580-74.jfif" alt="harman"
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/252820/1320x580-74.jfif" alt="ableton"
                      class="featured__hero-bg">
                   <div class="featured__hero-content">
                      <div class="featured__hero-logo-wrapper">
@@ -77,7 +76,7 @@
                </div>
 
                <div class="carousel-item featured__hero-item">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/252820/1320x580-78.jfif" alt="harman"
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/252820/1320x580-78.jfif" alt="apple"
                      class="featured__hero-bg">
                   <div class="featured__hero-content">
                      <div class="featured__hero-logo-wrapper">
@@ -98,34 +97,26 @@
                <span class="sr-only">Next</span>
             </a>
 
-            <div class="featured__deals extra-padding">
-               <div class="row">
-                  <div class="col-12 col-md-4">
-                     <div class="featured__deal featured__deal--selected" data-target="#carousel-thumb" data-slide-to="0" class="active">
-                        <div class="featured__deal-logo-wrapper">
-                           <img src="img/logo--harman.png" alt="harman kardon" class="featured__deal-logo">
-                        </div>
-                        <p class="featured__deal-content">20% off</p>
-                     </div>
+            <div class="carousel-indicators extra-padding featured__deals">
+               <div class="featured__deal featured__deal active" data-target="#carousel-thumb" data-slide-to="0" class="active">
+                  <div class="featured__deal-logo-wrapper">
+                     <img src="img/logo--harman.png" alt="harman kardon" class="featured__deal-logo">
                   </div>
+                  <p class="featured__deal-content">20% off</p>
+               </div>
 
-                  <div class="col-12 col-md-4">
-                     <div class="featured__deal" data-target="#carousel-thumb" data-slide-to="1">
-                        <div class="featured__deal-logo-wrapper">
-                           <img src="img/logo--ableton.svg" alt="ableton" class="featured__deal-logo">
-                        </div>
-                        <p class="featured__deal-content">Discounts on Ableton Live</p>
-                     </div>
+               <div class="featured__deal" data-target="#carousel-thumb" data-slide-to="1">
+                  <div class="featured__deal-logo-wrapper">
+                     <img src="img/logo--ableton.svg" alt="ableton" class="featured__deal-logo">
                   </div>
+                  <p class="featured__deal-content">Discounts on Ableton Live</p>
+               </div>
 
-                  <div class="col-12 col-md-4">
-                     <div class="featured__deal" data-target="#carousel-thumb" data-slide-to="2">
-                        <div class="featured__deal-logo-wrapper">
-                           <img src="img/logo--apple.png" alt="apple" class="featured__deal-logo">
-                        </div>
-                        <p class="featured__deal-content">Save on the Pro Apps Bundle</p>
-                     </div>
+               <div class="featured__deal" data-target="#carousel-thumb" data-slide-to="2">
+                  <div class="featured__deal-logo-wrapper">
+                     <img src="img/logo--apple.png" alt="apple" class="featured__deal-logo">
                   </div>
+                  <p class="featured__deal-content">Save on the Pro Apps Bundle</p>
                </div>
             </div>
          </section>
@@ -617,15 +608,11 @@
    </div>
 
 
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-   </script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-   </script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-   </script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+   <script src="js/mobile-slider.js"></script>
 </body>
 
 </html>
