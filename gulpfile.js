@@ -9,7 +9,10 @@ gulp.task('watch', function() {
    browserSync.init({
       server: {
          baseDir: "app"
-      }
+      },
+      online: true,
+      tunnel: true,
+      logLevel: "debug"
    });
 
    watch('./app/index.html', function() {
