@@ -11,6 +11,12 @@
    padding-right: 25px;
    padding-top: 35px;
    transition: box-shadow .2s;
+
+   @include media-breakpoint-down(sm) {
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+   }
    
    &:hover {
       box-shadow: $shadow-large;
@@ -20,6 +26,10 @@
       display: flex;
       height: 120px;
       width: 80%;
+
+      @include media-breakpoint-down(sm) {
+         width: 95%;
+      }
    }
 
    &__img {

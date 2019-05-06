@@ -1,11 +1,16 @@
-.featured {
+/* bootstrap fix */
+.carousel-indicators {
+   position: relative;
+   margin: 0;
+   z-index: 1;
+}
 
+.featured {
    &__hero-item {
       height: 412px;
    }
 
    &__hero-content {
-      height: 200px;
       margin-left: 50px;
       margin-top: 113px;
       position: relative;
@@ -13,12 +18,12 @@
       z-index: 2;
 
       @include media-breakpoint-down(md) {
-         margin-left: 30px;
+         margin-left: 60px;
+         margin-right: 60px;
          width: 45%;
       }
 
       @include media-breakpoint-down(sm) {
-         margin-left: 30px;
          width: 70%;
       }
    }
@@ -29,19 +34,22 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: bottom;
    }
 
    &__hero-logo-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       height: 90px;
    }
 
    &__hero-logo {
+      align-self: flex-start;
       filter: invert(100%);
       max-height: 100%;
       max-width: 100%;
       object-fit: contain;
-      object-position: center;
    }
 
    &__hero-copy {
@@ -52,16 +60,13 @@
 
    &__deals {
       margin-top: -60px;
+      display: flex;
+      justify-content: center;
 
       @include media-breakpoint-down(sm) {
          margin-left: 30px;
          margin-right: 30px;
-
-         /* remove after slider is made. just for mockup purposes only */
-         & > .row > *:not(:first-child) {
-            display: none;
-            visibility: hidden;
-         }
+         height: 50px;
       }
    }
    
@@ -70,25 +75,70 @@
       background: #fff;
       box-shadow: $shadow-medium;
       display: flex;
+      flex-direction: column;
+      flex: 33%;
       height: 140px;
       padding-left: 20px;
       padding-right: 20px;
+      position: relative;
       transition: box-shadow .2s;
-      flex-direction: column;
 
+      &:not(:last-child) {
+         margin-right: 30px;
+      }
 
       &:hover {
          box-shadow: $shadow-large;
-         text-decoration: none;
          cursor: pointer;
+         text-decoration: none;
       }
 
-      &--selected {
-         border: 2px solid $color-primary;
+      @include media-breakpoint-down(sm) {
+         box-shadow: none;
+         background: none;
+         height: 60px;
+         flex: 0 0 20px;
+         padding-left: 15px;
+         padding-right: 15px;
+         
+         & * {
+            display: none;
+         }
+
+         &:not(:last-child) {
+            margin-right: 0px;
+         }
+
+         &::after {
+            background: #fff;
+            border-radius: 100%;
+            content: " ";
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            transition: all .5s;
+         }
+
+         &:hover {
+            box-shadow: none;
+         }
+      }
+
+      &.active {
+         outline: 2px solid $color-primary;
 
          /* remove after slider is made. just for mockup purposes only */
          @include media-breakpoint-down(sm) {
             border: none;
+            outline: none;
+
+            &::after {
+               background: $color-primary;
+               height: 15px;
+               width: 15px;
+            }
          }
       }
    }
@@ -116,14 +166,6 @@
       max-width: 100%;
       object-fit: contain;
       object-position: center;
-
-      @include media-breakpoint-down(md) {
-         margin: 0 auto;
-         max-height: 100%;
-         max-width: 100%;
-         object-fit: contain;
-         object-position: center;
-      }
    }
 
    &__deal-content {
@@ -146,12 +188,31 @@
       position: absolute;
       top: 77%;
       width: 50px;
+      z-index: 200;
 
-      &--prev { margin-left: -1%; }
-      &--next { margin-right: -1%; }
+      @include media-breakpoint-down(sm) {
+         top: 0%;
+      }
+
+      &--prev { 
+         margin-left: -1%; 
+         @include media-breakpoint-down(sm) {
+            margin-left: 0%;
+         }
+      }
+      &--next { 
+         margin-right: -1%; 
+         @include media-breakpoint-down(sm) {
+            margin-right: 0%;
+         }
+      }
    }
 
    &__control-icon {
       filter: invert(100%);
+
+      @include media-breakpoint-down(sm) {
+         filter: none;
+      }
    }
 }
